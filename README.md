@@ -15,7 +15,8 @@ The result: a self-documenting database where humans (browsing the Obsidian grap
 
 ## 🕸️ Knowledge Graph
 
-<!-- Paste the Obsidian graph screenshot here — drag it into the GitHub editor, it'll auto-upload -->
+<img width="701" height="504" alt="graph_wiki" src="https://github.com/user-attachments/assets/326820f1-58c3-41d5-85ba-0d557a5f1f95" />
+
 
 The wiki agent generates 120+ cross-linked Markdown pages from a real procurement/sales/vendor-management schema (vendors, purchase orders, sales orders, sites, items, shipments, pricing...) — browsable as a fully connected knowledge graph in Obsidian.
 
