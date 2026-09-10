@@ -14,7 +14,6 @@ Most NL-to-SQL tools hand an LLM the raw `information_schema` and hope it guesse
 The result: a self-documenting database where humans (browsing the Obsidian graph) and the SQL agent share the same source of truth.
 
 ## 🕸️ Knowledge Graph
-
 <img width="701" height="504" alt="graph_wiki" src="https://github.com/user-attachments/assets/326820f1-58c3-41d5-85ba-0d557a5f1f95" />
 
 
