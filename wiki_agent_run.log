@@ -1,0 +1,240 @@
+[enums] scanning for enum-like columns...
+[domains] grouping tables into business domains...
+[corrections] found 2 logged sql_query_agent failure(s) across 2 table(s); folding into affected pages
+[query] active-vendors-latest-price -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\active-vendors-latest-price.md
+[query] customers-credit-holds -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\customers-credit-holds.md
+[query] recent-sales-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\recent-sales-orders.md
+[query] unshipped-items-purchase-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\unshipped-items-purchase-orders.md
+[query] sales-reps-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\sales-reps-orders.md
+[query] vendor-invoices-payment-transactions -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\vendor-invoices-payment-transactions.md
+[query] items-growth-opportunity-events -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\items-growth-opportunity-events.md
+[query] customer-credit-terms-purchase-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\customer-credit-terms-purchase-orders.md
+[query] sales-orders-shipments -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\sales-orders-shipments.md
+[query] item-shipping-addresses -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\item-shipping-addresses.md
+[query] customer-credit-terms-sales-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\customer-credit-terms-sales-orders.md
+[query] purchase-requisition-lines-items -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\purchase-requisition-lines-items.md
+[query] credit-terms-customer-regions -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\credit-terms-customer-regions.md
+[query] growth-opportunity-events-sites -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\growth-opportunity-events-sites.md
+[query] site-vendor-assignments-primary-status -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\site-vendor-assignments-primary-status.md
+[query] sales-invoice-payment-details -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\sales-invoice-payment-details.md
+[query] growth-opportunity-customers-sites -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\growth-opportunity-customers-sites.md
+[query] customer-credit-site-vendor-assignments -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\customer-credit-site-vendor-assignments.md
+[query] customer-sales-orders -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\customer-sales-orders.md
+[query] purchase-orders-assoc-invoices -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\queries\purchase-orders-assoc-invoices.md
+[entity] customer_credit_terms
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\customer_credit_terms.md (4422 bytes)
+[entity] customers
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\customers.md (5347 bytes)
+[entity] growth_opportunity_event
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\growth_opportunity_event.md (21677 bytes)
+[entity] items
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\items.md (11221 bytes)
+[entity] payment_transactions
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\payment_transactions.md (4319 bytes)
+[entity] po_receipt_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\po_receipt_lines.md (3668 bytes)
+[entity] po_receipts
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\po_receipts.md (3989 bytes)
+[entity] purchase_order_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\purchase_order_lines.md (4159 bytes)
+[entity] purchase_orders
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\purchase_orders.md (5519 bytes)
+[entity] purchase_requisition_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\purchase_requisition_lines.md (3934 bytes)
+[entity] purchase_requisitions
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\purchase_requisitions.md (4862 bytes)
+[entity] sales_invoice_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_invoice_lines.md (3905 bytes)
+[entity] sales_invoices
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_invoices.md (4643 bytes)
+[entity] sales_order_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_order_lines.md (4351 bytes)
+[entity] sales_orders
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_orders.md (5485 bytes)
+[entity] sales_reps
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_reps.md (3540 bytes)
+[entity] sales_return_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_return_lines.md (3637 bytes)
+[entity] sales_returns
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sales_returns.md (3507 bytes)
+[entity] shipment_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\shipment_lines.md (4012 bytes)
+[entity] shipments
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\shipments.md (4229 bytes)
+[entity] site_vendor_assignments
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\site_vendor_assignments.md (4349 bytes)
+[entity] sites
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\sites.md (9574 bytes)
+[entity] source_vendor_pricing
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\source_vendor_pricing.md (4118 bytes)
+[entity] source_vendors
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\source_vendors.md (9242 bytes)
+[entity] vendor_contracts
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_contracts.md (4401 bytes)
+[entity] vendor_invoice_lines
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_invoice_lines.md (3966 bytes)
+[entity] vendor_invoices
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_invoices.md (4950 bytes)
+[entity] vendor_performance
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_performance.md (4114 bytes)
+[entity] vendor_pricing
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_pricing.md (4568 bytes)
+[entity] vendor_shipping_points
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendor_shipping_points.md (3885 bytes)
+[entity] vendors
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\entities\vendors.md (10391 bytes)
+[relationship] customer_credit_terms.customer_id -> customers.customer_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\customer_credit_terms-customers.md (2042 bytes)
+[relationship] customers.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\customers-sites.md (2112 bytes)
+[relationship] growth_opportunity_event.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\growth_opportunity_event-sites.md (2264 bytes)
+[relationship] growth_opportunity_event.true_vendor -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\growth_opportunity_event-vendors.md (2490 bytes)
+[relationship] growth_opportunity_event.source_vendor -> source_vendors.source_vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\growth_opportunity_event-source_vendors.md (2395 bytes)
+[relationship] growth_opportunity_event.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\growth_opportunity_event-items.md (2615 bytes)
+[relationship] payment_transactions.vendor_invoice_id -> vendor_invoices.invoice_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\payment_transactions-vendor_invoices.md (2160 bytes)
+[relationship] payment_transactions.sales_invoice_id -> sales_invoices.invoice_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\payment_transactions-sales_invoices.md (2132 bytes)
+[relationship] po_receipt_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\po_receipt_lines-items.md (2340 bytes)
+[relationship] po_receipt_lines.receipt_id -> po_receipts.receipt_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\po_receipt_lines-po_receipts.md (1847 bytes)
+[relationship] po_receipts.po_id -> purchase_orders.po_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\po_receipts-purchase_orders.md (2003 bytes)
+[relationship] purchase_order_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_order_lines-items.md (2399 bytes)
+[relationship] purchase_order_lines.po_id -> purchase_orders.po_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_order_lines-purchase_orders.md (2089 bytes)
+[relationship] purchase_orders.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_orders-vendors.md (2429 bytes)
+[relationship] purchase_orders.requisition_id -> purchase_requisitions.requisition_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_orders-purchase_requisitions.md (2230 bytes)
+[relationship] purchase_orders.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_orders-sites.md (2266 bytes)
+[relationship] purchase_requisition_lines.requisition_id -> purchase_requisitions.requisition_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_requisition_lines-purchase_requisitions.md (2198 bytes)
+[relationship] purchase_requisition_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_requisition_lines-items.md (2485 bytes)
+[relationship] purchase_requisitions.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\purchase_requisitions-sites.md (2223 bytes)
+[relationship] sales_invoice_lines.invoice_id -> sales_invoices.invoice_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_invoice_lines-sales_invoices.md (1982 bytes)
+[relationship] sales_invoice_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_invoice_lines-items.md (2581 bytes)
+[relationship] sales_invoices.order_id -> sales_orders.order_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_invoices-sales_orders.md (2019 bytes)
+[relationship] sales_order_lines.order_id -> sales_orders.order_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_order_lines-sales_orders.md (1927 bytes)
+[relationship] sales_order_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_order_lines-items.md (2373 bytes)
+[relationship] sales_orders.rep_id -> sales_reps.rep_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_orders-sales_reps.md (1984 bytes)
+[relationship] sales_orders.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_orders-sites.md (2234 bytes)
+[relationship] sales_orders.customer_id -> customers.customer_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_orders-customers.md (2140 bytes)
+[relationship] sales_return_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_return_lines-items.md (2246 bytes)
+[relationship] sales_return_lines.return_id -> sales_returns.return_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_return_lines-sales_returns.md (1816 bytes)
+[relationship] sales_returns.invoice_id -> sales_invoices.invoice_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\sales_returns-sales_invoices.md (1909 bytes)
+[relationship] shipment_lines.shipment_id -> shipments.shipment_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\shipment_lines-shipments.md (1821 bytes)
+[relationship] shipment_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\shipment_lines-items.md (2311 bytes)
+[relationship] shipments.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\shipments-sites.md (2046 bytes)
+[relationship] shipments.order_id -> sales_orders.order_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\shipments-sales_orders.md (1902 bytes)
+[relationship] site_vendor_assignments.site -> sites.site
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\site_vendor_assignments-sites.md (2200 bytes)
+[relationship] site_vendor_assignments.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\site_vendor_assignments-vendors.md (2352 bytes)
+[relationship] source_vendor_pricing.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\source_vendor_pricing-items.md (2480 bytes)
+[relationship] source_vendor_pricing.source_vendor_id -> source_vendors.source_vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\source_vendor_pricing-source_vendors.md (2191 bytes)
+[relationship] vendor_contracts.source_vendor_id -> source_vendors.source_vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_contracts-source_vendors.md (2157 bytes)
+[relationship] vendor_contracts.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_contracts-vendors.md (2194 bytes)
+[relationship] vendor_invoice_lines.invoice_id -> vendor_invoices.invoice_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_invoice_lines-vendor_invoices.md (2009 bytes)
+[relationship] vendor_invoice_lines.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_invoice_lines-items.md (2469 bytes)
+[relationship] vendor_invoices.po_id -> purchase_orders.po_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_invoices-purchase_orders.md (2123 bytes)
+[relationship] vendor_invoices.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_invoices-vendors.md (2284 bytes)
+[relationship] vendor_performance.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_performance-vendors.md (2197 bytes)
+[relationship] vendor_pricing.item_no -> items.item_no
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_pricing-items.md (2380 bytes)
+[relationship] vendor_pricing.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_pricing-vendors.md (2190 bytes)
+[relationship] vendor_shipping_points.vendor_id -> vendors.vendor_id
+  saved -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\relationships\vendor_shipping_points-vendors.md (2175 bytes)
+[domain] Customer Management -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\customer-management.md
+[domain] Order Management -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\order-management.md
+[domain] Product Catalog -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\product-catalog.md
+[domain] Logistics -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\logistics.md
+[domain] Vendor Management -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\vendor-management.md
+[domain] Pricing -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\pricing.md
+[domain] Uncategorized -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\uncategorized.md
+[cleanup] removed stale C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\catalog-items.md
+[cleanup] removed stale C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\domains\growth-opportunities.md
+[enum] credit_hold_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\credit_hold_flag.md
+[enum] customer_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\customer_type.md
+[enum] site (8 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\site.md
+[enum] active_flag (2 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\active_flag.md
+[enum] source_vendor_group (2 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\source_vendor_group.md
+[enum] order_group_id (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\order_group_id.md
+[enum] cmi (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\cmi.md
+[enum] psa (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\psa.md
+[enum] active_stock (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\active_stock.md
+[enum] demand_status (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\demand_status.md
+[enum] non_stock (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\non_stock.md
+[enum] remote (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\remote.md
+[enum] inactive (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\inactive.md
+[enum] proprietary (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\proprietary.md
+[enum] order_day_in_week (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\order_day_in_week.md
+[enum] auto_approval (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\auto_approval.md
+[enum] fixed_review (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\fixed_review.md
+[enum] build_to_max (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\build_to_max.md
+[enum] initial (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\initial.md
+[enum] ot4t (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\ot4t.md
+[enum] true_vendor_ship_from_suffix (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\true_vendor_ship_from_suffix.md
+[enum] source_vendor_ship_from_suffix (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\source_vendor_ship_from_suffix.md
+[enum] buying_group (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\buying_group.md
+[enum] item_catch_weight_ind (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\item_catch_weight_ind.md
+[enum] event_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\event_type.md
+[enum] price_unit (3 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\price_unit.md
+[enum] item_status (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\item_status.md
+[enum] ship_split (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\ship_split.md
+[enum] proprietary_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\proprietary_flag.md
+[enum] stock_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\stock_type.md
+[enum] demand_status_code (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\demand_status_code.md
+[enum] min_max_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\min_max_type.md
+[enum] include_min_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\include_min_flag.md
+[enum] buy_multiple_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\buy_multiple_type.md
+[enum] vendor_storage_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\vendor_storage_type.md
+[enum] consignment_item_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\consignment_item_flag.md
+[enum] catch_weight_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\catch_weight_flag.md
+[enum] item_update_flag (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\item_update_flag.md
+[enum] freight_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\freight_type.md
+[enum] weekly_usage_code (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\weekly_usage_code.md
+[enum] buy_mltp_typ (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\buy_mltp_typ.md
+[enum] status (5 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\status.md
+[enum] is_primary (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\is_primary.md
+[enum] vendor_type (1 table(s)) -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\enums\vendor_type.md
+[glossary] updated -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\glossary.md
+[conventions] updated -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\conventions.md
+[erd] updated -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\erd.md
+[corrections] archived -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\corrections_archive.md
+[index] updated -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\index.md
+[log] appended -> C:\Users\kotla\OneDrive\Desktop\llmwiki\LLM_WIKI_ON_DB\wiki\log.md

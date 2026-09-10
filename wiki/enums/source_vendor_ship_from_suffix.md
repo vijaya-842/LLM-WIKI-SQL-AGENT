@@ -1,0 +1,33 @@
+---
+title: source_vendor_ship_from_suffix enum
+type: concept
+status: active
+created: 2026-07-31
+updated: 2026-08-03
+source_paths:
+  - live-database:public.growth_opportunity_event
+source_count: 1
+---
+
+# source_vendor_ship_from_suffix
+
+## Summary
+Observed distinct values for `source_vendor_ship_from_suffix`, queried live from 1 table(s) rather than inferred.
+
+## Evidence
+### `growth_opportunity_event.source_vendor_ship_from_suffix`
+
+| Value | Count |
+|---|---|
+| B | 1 |
+| D | 1 |
+| A | 1 |
+| H | 1 |
+| F | 1 |
+
+## Tensions Or Gaps
+All tables using this column name share the same observed value set.
+
+## Related
+- [[entities/growth_opportunity_event]]
+- [[glossary]]

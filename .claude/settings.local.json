@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Process -Id 24752,14852 | Select-Object Id,ProcessName,CPU,WorkingSet | Format-Table -AutoSize\")"
+    ]
+  }
+}
