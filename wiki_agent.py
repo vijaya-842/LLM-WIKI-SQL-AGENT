@@ -12,7 +12,7 @@ import db_introspect as db
 load_dotenv()
 
 _client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b")
+MODEL = "openai/gpt-oss-120b"
 
 WIKI_DIR = os.path.join(os.path.dirname(__file__), "wiki")
 ENTITIES_DIR = os.path.join(WIKI_DIR, "entities")
@@ -418,7 +418,7 @@ def chat_with_agent(user_instruction, max_rounds=15):
 
     for _ in range(max_rounds):
         response = _client.chat.completions.create(
-            model=MODEL, messages=messages, tools=TOOLS, max_completion_tokens=800
+            model=MODEL, messages=messages, tools=TOOLS, max_tokens=800
         )
         msg = response.choices[0].message
         messages.append(msg)
@@ -660,13 +660,14 @@ def _chat_json(prompt):
             model=MODEL,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
-            max_completion_tokens=800,
+            max_tokens=800,
         )
     except Exception:
         response = _client.chat.completions.create(
             model=MODEL,
             messages=[{"role": "user", "content": prompt}],
             max_completion_tokens=800,
+            extra_body={"reasoning": {"enabled": True}},
         )
     return json.loads(response.choices[0].message.content)
 
@@ -674,7 +675,9 @@ def _chat_json(prompt):
 def _chat_text(prompt):
     time.sleep(15)
     response = _client.chat.completions.create(
-        model=MODEL, messages=[{"role": "user", "content": prompt}], max_completion_tokens=500
+        model=MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=500,
     )
     return response.choices[0].message.content
 
@@ -1522,6 +1525,7 @@ def run_agent():
     entity_paths, all_descriptions, table_summaries = _generate_entity_pages(
         tables, all_fks, domain_map, enum_map, corrections=corrections, query_map=query_map
     )
+    _prune_stale_pages(ENTITIES_DIR, {f"{table}.md" for table in tables})
     relationship_paths = _generate_relationship_pages(all_fks, corrections=corrections)
 
     domain_paths = _generate_domain_pages(domains)

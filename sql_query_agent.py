@@ -11,41 +11,82 @@ Flow:
 4. Ask the model to write one SQL query grounded only in what those pages say.
 5. Optionally execute the query (SELECT-only) against Postgres and return rows.
 
-Uses the OpenAI API (OPENAI_API_KEY from the environment / .env) rather than the local Ollama
-model wiki_agent.py still uses for wiki generation — the two are independent.
+Uses OpenRouter's OpenAI-compatible API (OPENROUTER_API_KEY from .env) for both the navigation
+and SQL-generation steps.
 """
 
 import json
 import os
 import re
+import time
 from datetime import date
 
-from groq import Groq
+from dotenv import load_dotenv
+from openai import OpenAI, RateLimitError
 
 import db_introspect as db
-from dbconnection import get_connection  # importing this also triggers dbconnection's load_dotenv(),
-# which is what makes OPENAI_API_KEY (set in .env) visible to the OpenAI() client below.
+from dbconnection import get_connection
+
+load_dotenv()
+
+from groq import Groq  # replace OpenAI import
 
 _client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-MODEL = "qwen/qwen3.8-27b"  
+MODEL = "openai/gpt-oss-120b"
+NAV_MODEL = MODEL
+SQL_MODEL = MODEL
 # Wiki navigation is a cheap, high-volume tool-calling loop (keyword search + page reads) where a
 # wrong pick just means one extra read_wiki_page round trip. Writing/correcting SQL is where actual
 # schema reasoning happens (e.g. spotting that a dollar amount is derived on a line-item table
 # rather than stored on the header table) and is where a weaker model's mistakes turn into
 # validation failures or, worse, silently-wrong SQL — so it gets its own, stronger-by-default model.
-NAV_MODEL = os.environ.get("GROQ_NAV_MODEL", MODEL)
-SQL_MODEL = os.environ.get("GROQ_SQL_MODEL", MODEL)
+NAV_MODEL = os.environ.get("OPENROUTER_NAV_MODEL", MODEL)
+SQL_MODEL = os.environ.get("OPENROUTER_SQL_MODEL", MODEL)
+FALLBACK_MODELS = [
+    model.strip()
+    for model in os.environ.get("OPENROUTER_FALLBACK_MODELS", "").split(",")
+    if model.strip()
+]
+MAX_RATE_LIMIT_RETRIES = 1
 
 
 
 def _chat(messages, tools=None, model=None):
     """Thin wrapper around the OpenAI chat completions call, used everywhere this module needs a
     model response. Returns the raw ChatCompletionMessage (has .content and .tool_calls)."""
-    kwargs = {"model": model or MODEL, "messages": messages, "max_tokens": 500}
+    kwargs = {
+        "messages": messages,
+        "max_tokens": 500,
+    }
     if tools:
         kwargs["tools"] = tools
-    response = _client.chat.completions.create(**kwargs)
-    return response.choices[0].message
+    requested_model = model or MODEL
+    models = [requested_model] + [fallback for fallback in FALLBACK_MODELS if fallback != requested_model]
+    last_error = None
+
+    for candidate in models:
+        kwargs["model"] = candidate
+        for attempt in range(MAX_RATE_LIMIT_RETRIES + 1):
+            try:
+                response = _client.chat.completions.create(**kwargs)
+                choices = getattr(response, "choices", None)
+                if not choices or choices[0] is None:
+                    raise RuntimeError(f"Model returned no choices (model={candidate})")
+                message = getattr(choices[0], "message", None)
+                if message is None:
+                    raise RuntimeError(f"Model returned an empty message (model={candidate})")
+                return message
+            except RateLimitError as error:
+                last_error = error
+                if attempt < MAX_RATE_LIMIT_RETRIES:
+                    time.sleep(1)
+
+    if last_error is not None:
+        raise RuntimeError(
+            "All configured OpenRouter models are rate-limited. Set "
+            "OPENROUTER_FALLBACK_MODELS to a comma-separated list of available models, "
+            "or add your own provider key in OpenRouter integrations."
+        ) from last_error
 WIKI_DIR = os.path.join(os.path.dirname(__file__), "wiki")
 INDEX_PATH = os.path.join(WIKI_DIR, "index.md")
 ENTITIES_DIR = os.path.join(WIKI_DIR, "entities")
@@ -367,8 +408,16 @@ def select_relevant_pages(question, index_text, max_pages=8, max_tool_rounds=6):
             break
 
         for tool_call in tool_calls:
-            name = tool_call.function.name
-            args = json.loads(tool_call.function.arguments or "{}")
+            function = getattr(tool_call, "function", None)
+            if function is None:
+                raise RuntimeError("Model returned a tool call without a function payload")
+            name = function.name
+            try:
+                args = json.loads(function.arguments or "{}")
+            except (TypeError, json.JSONDecodeError) as error:
+                raise RuntimeError(f"Model returned invalid arguments for tool '{name}'") from error
+            if not isinstance(args, dict):
+                raise RuntimeError(f"Model returned non-object arguments for tool '{name}'")
             result = _run_tool_call(name, args)
             if name == "read_wiki_page" and len(pages) < max_pages:
                 path = args.get("path", "").strip()
@@ -411,7 +460,10 @@ def _extract_sql(response_text):
     match = re.search(r"```\s*\n(.*?)```", response_text, re.DOTALL)
     if match:
         return match.group(1).strip()
-    return response_text.strip()
+    # A model explanation without a code fence is not executable SQL. Treat it as an
+    # unanswered request instead of allowing prose to reach validation or Postgres.
+    response = response_text.strip()
+    return response if re.match(r"^(?:SELECT|WITH)\b", response, re.IGNORECASE) else ""
 
 
 def _extract_explanation(response_text):
@@ -649,6 +701,12 @@ def generate_sql(question, max_pages=8, max_correction_attempts=MAX_CORRECTION_A
 
     schema_context = "\n".join(page_context(link, text) for link, text in pages.items())
     schema_columns = db.get_schema_columns()  # validate against the full live schema, not just pages
+    pages = {
+        link: text
+        for link, text in pages.items()
+        if not link.startswith("entities/") or link.rsplit("/", 1)[-1] in schema_columns
+    }
+    schema_context = "\n".join(page_context(link, text) for link, text in pages.items())
     context_tables = {link.rsplit("/", 1)[-1] for link in pages if link.startswith("entities/")}
 
     prompt = SQL_PROMPT.format(
@@ -660,6 +718,12 @@ def generate_sql(question, max_pages=8, max_correction_attempts=MAX_CORRECTION_A
     content = _chat([{"role": "user", "content": prompt}], model=SQL_MODEL).content
     sql = _extract_sql(content)
     sql_explanation = _extract_explanation(content)
+
+    if not sql:
+        raise ValueError(
+            "The question cannot be answered with the allowlisted schema. "
+            "The model did not produce an executable SELECT query."
+        )
 
     corrected = False
     is_valid, reason = db.validate_query_sql(sql, schema_columns)
@@ -695,9 +759,10 @@ def generate_sql(question, max_pages=8, max_correction_attempts=MAX_CORRECTION_A
 
 
 def run_sql(sql, limit=200):
-    """Execute any SQL statement and return (columns, rows). For statements that return no
-    result set (INSERT/UPDATE/DELETE/DDL/etc.), columns and rows are both empty and the
-    transaction is committed."""
+    """Execute a generated SELECT query and return (columns, rows)."""
+    if not re.match(r"^(?:SELECT|WITH)\b", sql.strip(), re.IGNORECASE):
+        raise ValueError("Only SELECT queries are supported; generated text must begin with SELECT or WITH")
+
     conn = get_connection()
     try:
         with conn.cursor() as cur:
